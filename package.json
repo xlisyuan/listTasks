@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && git checkout gh-pages && git rm -rf * && copy ..\\dist\\* . && git add . && git commit -m \"Update build\" && git push origin gh-pages && git checkout main"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
